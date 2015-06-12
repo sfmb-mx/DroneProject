@@ -1,6 +1,6 @@
 ---
 title       : Dron Project
-subtitle    : Data Science Specialization
+subtitle    : Drones para aplicaciones agropecuarias
 author      : Sergio-Feliciano Mendoza-Barrera
 date        : Sat Apr 18 14:30:09 CDT 2015
 job         : https://jaalkab.shinyapps.io/TwitterMapShinyApp

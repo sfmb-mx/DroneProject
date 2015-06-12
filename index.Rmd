@@ -1,5 +1,5 @@
 ---
-title       : Dron Project
+title       : Drone Project
 subtitle    : Drones para aplicaciones agropecuarias
 author      : Sergio-Feliciano Mendoza-Barrera
 date        : Sat Apr 18 14:30:09 CDT 2015
@@ -15,84 +15,95 @@ url:
   assets    : assets
 github:
   user: smendozabarrera
-  repo: DronProject
+  repo: DroneProject
 --- .segue .quote .dark
 
-<iframe src = 'https://jaalkab.shinyapps.io/TwitterMapShinyApp/' height='600px'></iframe>
-
---- .class #id
-
-## Shiny advantages and cons ##
-
-### Advantages ###
-
-- Shiny is one of the easiest ways to develop useful and data based
-applications without web development knowledge.
-- Support online demos
-- Empowered by Javascript and CSS!
-
-### Cons ###
-
-- Shiny server have tricky details in the installation and
-  configuration process.
-- R in the server package installation have some permission issues if
-  you do not have root access.
-- Debugging issues at the server side.
-
---- .class #id
-
-## UI code ##
-
-```{r}
-## fitshinyUI(bootstrapPage(
-##     tags$link(href='style.css', rel='stylesheet'),
-##     tags$script(src='app.js'),
-##     includeHTML('www/credits.html'),
-##     fluidRow(
-##         column(3,
-##                p('*** Please enter your username, then submit.'),
-##                p('*** Please wait after submit...'),
-##                textOutput('minibuffer'),
-##                textOutput('minibufferUser')  ),
-## ...
-##                textInput("userName", label =
-##                              h4("Enter your username"), value =
-##                                  "mitxalumni"),
-##                actionButton("SubmitButton", "Submit")
-##                )
-##         ),
-##         mapOutput('map_container')  ))
-```
-
---- .class #id
-
-## Server code ##
-
-```{r results = 'HIDE'}
-require(shiny)
-require(rCharts)
-
-shinyServer(function(input, output, session){
-
-    observeEvent(input$SubmitButton, {
-
-         output$minibuffer <- renderText("*** Loading Twitter data, please wait...:")
-
-         output$map_container <- renderMap({
-             output$minibuffer <- renderText("*** Network map for:")
-             output$minibufferUser <- renderText(input$userName)
-             plotMap(input$userName)
-
-     })
- })
-})
-```
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0dy-oEdPwoU" allowfullscreen></iframe>
 
 --- .segue .quote .dark
 
-## Thank you for these great courses ##
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hBwbvgunRhI" allowfullscreen></iframe>
 
-<q>"Shiny is a great tool for Data Science presentations. @smendozab"</q>
+--- .class #id
+
+## Drone para aplicaciones forestales ##
+
+- El objetivo principal de esta aplicación de este Drone es la
+capacidad de plantar semillas especiales para la reforestación.
+
+### Beneficios ###
+
+- Plantación acelerada de semillas
+- Mínimo personal in-situ
+- Reducción de costos de mano de obra
+- Reutilización
+- Cobertura de amplias zonas y/o difícil acceso
+
+--- .class #id
+
+## Dispensador de semillas especiales ##
+
+- Las semillas especiales son semillas que han sido tratadas y
+  cultivadas en un vivero, recubiertas de un material que les permite
+  tener ciertas ventajas cuando son plantadas.
+- Se requiere plantar cada semilla a una distancia de entre 2 a 2.5 metros
+- Las condiciones del suelo dependen mucho de la región específica.
+    + Se prevé la existencia de áreas montañosas
+- De 1 a 3 kilogramos de carga útil
+- Planear una planta piloto
+- Costos
+    + Renta
+    + Venta
+
+--- .class #id
+
+## Retos a resolver ##
+
+- *Dispensador*.
+    + Semillas a presión
+    + Pistolas de gotcha
+    + Peso
+    + Volumen
+
+- *Precisión de la navegación*
+    + Sin GPS. Mayor error.
+    + Con GPS
+
+- *Área de Navegación*
+    + Altura
+    + Terreno
+    + Obstáculos
+
+--- .class #id
+
+## Retos a resolver (Continuación...) ##
+
+- *GPS*
+    + Precisión a 3 metros con un sólo GPS
+    + GPS diferencial con estación terrena
+    + Relajar (rangos de error) la distancia de sembrado
+
+- *Peso de las semillas*
+- *Rango de velocidad del viento*
+- *Tamaño*. Que depende del tiempo de vuelo y de la carga útil.
+- *Costo*
+- *Velocidad*
+
+--- .class #id
+
+## Retos a resolver (Continuación...) ##
+
+- *Tiempo de vuelo*
+- *Portabilidad*
+- *Duplicar el producto*
+- *Aseguramiento para drones*. Sólo para daños a terceros.
+- *Permisos para pilotos*. "Licencia de operador".
+
+--- .segue .quote .dark
+
+## GRACIAS. ##
+
+<q>Contacto:  222.181.7154</q>
 
 <style>
 .dark q {

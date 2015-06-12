@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Dron Project</title>
+  <title>Drone Project</title>
   <meta charset="utf-8">
-  <meta name="description" content="Dron Project">
+  <meta name="description" content="Drone Project">
   <meta name="author" content="Sergio-Feliciano Mendoza-Barrera">
   <meta name="generator" content="slidify" />
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -33,11 +33,11 @@
     <!-- LOGO SLIDE -->
         <slide class="title-slide segue nobackground">
   <hgroup class="auto-fadein">
-    <h1>Dron Project</h1>
+    <h1>Drone Project</h1>
     <h2>Drones para aplicaciones agropecuarias</h2>
     <p>Sergio-Feliciano Mendoza-Barrera<br/>https://jaalkab.shinyapps.io/TwitterMapShinyApp</p>
   </hgroup>
-    <a href="https://github.com/smendozabarrera/DronProject/zipball/gh-pages" class="example">
+    <a href="https://github.com/smendozabarrera/DroneProject/zipball/gh-pages" class="example">
      Download
     </a>
   <article></article>  
@@ -47,7 +47,15 @@
     <!-- SLIDES -->
     <slide class="segue quote dark" id="slide-1" style="background:;">
   <article data-timings="">
-    <iframe src = 'https://jaalkab.shinyapps.io/TwitterMapShinyApp/' height='600px'></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/0dy-oEdPwoU" allowfullscreen></iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue quote dark" id="slide-2" style="background:;">
+  <article data-timings="">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/hBwbvgunRhI" allowfullscreen></iframe>
 
   </article>
   <!-- Presenter Notes -->
@@ -55,26 +63,22 @@
 
 <slide class="class" id="id" style="background:;">
   <hgroup>
-    <h2>Shiny advantages and cons</h2>
+    <h2>Drone para aplicaciones forestales</h2>
   </hgroup>
   <article data-timings="">
-    <h3>Advantages</h3>
-
-<ul>
-<li>Shiny is one of the easiest ways to develop useful and data based
-applications without web development knowledge.</li>
-<li>Support online demos</li>
-<li>Empowered by Javascript and CSS!</li>
+    <ul>
+<li>El objetivo principal de esta aplicación de este Drone es la
+capacidad de plantar semillas especiales para la reforestación.</li>
 </ul>
 
-<h3>Cons</h3>
+<h3>Beneficios</h3>
 
 <ul>
-<li>Shiny server have tricky details in the installation and
-configuration process.</li>
-<li>R in the server package installation have some permission issues if
-you do not have root access.</li>
-<li>Debugging issues at the server side.</li>
+<li>Plantación acelerada de semillas</li>
+<li>Mínimo personal in-situ</li>
+<li>Reducción de costos de mano de obra</li>
+<li>Reutilización</li>
+<li>Cobertura de amplias zonas y/o difícil acceso</li>
 </ul>
 
   </article>
@@ -83,28 +87,28 @@ you do not have root access.</li>
 
 <slide class="class" id="id" style="background:;">
   <hgroup>
-    <h2>UI code</h2>
+    <h2>Dispensador de semillas especiales</h2>
   </hgroup>
   <article data-timings="">
-    <pre><code class="r">## fitshinyUI(bootstrapPage(
-##     tags$link(href=&#39;style.css&#39;, rel=&#39;stylesheet&#39;),
-##     tags$script(src=&#39;app.js&#39;),
-##     includeHTML(&#39;www/credits.html&#39;),
-##     fluidRow(
-##         column(3,
-##                p(&#39;*** Please enter your username, then submit.&#39;),
-##                p(&#39;*** Please wait after submit...&#39;),
-##                textOutput(&#39;minibuffer&#39;),
-##                textOutput(&#39;minibufferUser&#39;)  ),
-## ...
-##                textInput(&quot;userName&quot;, label =
-##                              h4(&quot;Enter your username&quot;), value =
-##                                  &quot;mitxalumni&quot;),
-##                actionButton(&quot;SubmitButton&quot;, &quot;Submit&quot;)
-##                )
-##         ),
-##         mapOutput(&#39;map_container&#39;)  ))
-</code></pre>
+    <ul>
+<li>Las semillas especiales son semillas que han sido tratadas y
+cultivadas en un vivero, recubiertas de un material que les permite
+tener ciertas ventajas cuando son plantadas.</li>
+<li>Se requiere plantar cada semilla a una distancia de entre 2 a 2.5 metros</li>
+<li>Las condiciones del suelo dependen mucho de la región específica.
+
+<ul>
+<li>Se prevé la existencia de áreas montañosas</li>
+</ul></li>
+<li>De 1 a 3 kilogramos de carga útil</li>
+<li>Planear una planta piloto</li>
+<li>Costos
+
+<ul>
+<li>Renta</li>
+<li>Venta</li>
+</ul></li>
+</ul>
 
   </article>
   <!-- Presenter Notes -->
@@ -112,47 +116,84 @@ you do not have root access.</li>
 
 <slide class="class" id="id" style="background:;">
   <hgroup>
-    <h2>Server code</h2>
+    <h2>Retos a resolver</h2>
   </hgroup>
   <article data-timings="">
-    <pre><code class="r">require(shiny)
-</code></pre>
+    <ul>
+<li><p><em>Dispensador</em>.</p>
 
-<pre><code>## Loading required package: shiny
-</code></pre>
+<ul>
+<li>Semillas a presión</li>
+<li>Pistolas de gotcha</li>
+<li>Peso</li>
+<li>Volumen</li>
+</ul></li>
+<li><p><em>Precisión de la navegación</em></p>
 
-<pre><code class="r">require(rCharts)
-</code></pre>
+<ul>
+<li>Sin GPS. Mayor error.</li>
+<li>Con GPS</li>
+</ul></li>
+<li><p><em>Área de Navegación</em></p>
 
-<pre><code>## Loading required package: rCharts
-</code></pre>
-
-<pre><code class="r">shinyServer(function(input, output, session){
-
-    observeEvent(input$SubmitButton, {
-
-         output$minibuffer &lt;- renderText(&quot;*** Loading Twitter data, please wait...:&quot;)
-
-         output$map_container &lt;- renderMap({
-             output$minibuffer &lt;- renderText(&quot;*** Network map for:&quot;)
-             output$minibufferUser &lt;- renderText(input$userName)
-             plotMap(input$userName)
-
-     })
- })
-})
-</code></pre>
+<ul>
+<li>Altura</li>
+<li>Terreno</li>
+<li>Obstáculos</li>
+</ul></li>
+</ul>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue quote dark" id="slide-5" style="background:;">
+<slide class="class" id="id" style="background:;">
   <hgroup>
-    <h2>Thank you for these great courses</h2>
+    <h2>Retos a resolver (Continuación...)</h2>
   </hgroup>
   <article data-timings="">
-    <p><q>&quot;Shiny is a great tool for Data Science presentations. @smendozab&quot;</q></p>
+    <ul>
+<li><p><em>GPS</em></p>
+
+<ul>
+<li>Precisión a 3 metros con un sólo GPS</li>
+<li>GPS diferencial con estación terrena</li>
+<li>Relajar (rangos de error) la distancia de sembrado</li>
+</ul></li>
+<li><p><em>Peso de las semillas</em></p></li>
+<li><p><em>Rango de velocidad del viento</em></p></li>
+<li><p><em>Tamaño</em>. Que depende del tiempo de vuelo y de la carga útil.</p></li>
+<li><p><em>Costo</em></p></li>
+<li><p><em>Velocidad</em></p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Retos a resolver (Continuación...)</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><em>Tiempo de vuelo</em></li>
+<li><em>Portabilidad</em></li>
+<li><em>Duplicar el producto</em></li>
+<li><em>Aseguramiento para drones</em>. Sólo para daños a terceros.</li>
+<li><em>Permisos para pilotos</em>. &quot;Licencia de operador&quot;.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue quote dark" id="slide-8" style="background:;">
+  <hgroup>
+    <h2>GRACIAS.</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><q>Contacto:  222.181.7154</q></p>
 
 <style>
 .dark q {
@@ -176,26 +217,44 @@ you do not have root access.</li>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Shiny advantages and cons'>
+        data-slide=2 title='NA'>
          2
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='UI code'>
+        data-slide=3 title='Drone para aplicaciones forestales'>
          3
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=4 title='Server code'>
+        data-slide=4 title='Dispensador de semillas especiales'>
          4
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=5 title='Thank you for these great courses'>
+        data-slide=5 title='Retos a resolver'>
          5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='Retos a resolver (Continuación...)'>
+         6
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='Retos a resolver (Continuación...)'>
+         7
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=8 title='GRACIAS.'>
+         8
       </a>
     </li>
   </ul>

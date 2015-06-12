@@ -1,6 +1,6 @@
 ---
 title       : Drone Project
-subtitle    : Drones para aplicaciones agropecuarias
+subtitle    : Drones para aplicaciones forestales y/o agropecuarias
 author      : Global Labs Mexico. Junio de 2015.
 date        : Sat Apr 18 14:30:09 CDT 2015
 job         : Sergio-Feliciano Mendoza-Barrera

@@ -1,9 +1,9 @@
 ---
 title       : Drone Project
 subtitle    : Drones para aplicaciones agropecuarias
-author      : Sergio-Feliciano Mendoza-Barrera
+author      : Global Labs Mexico. Junio de 2015.
 date        : Sat Apr 18 14:30:09 CDT 2015
-job         : https://jaalkab.shinyapps.io/TwitterMapShinyApp
+job         : Sergio-Feliciano Mendoza-Barrera
 framework   : io2012              # {io2012, html5slides, shower, dzslides, slidy ...}
 highlighter : highlight.js        # {highlight.js, prettify, highlight}
 hitheme     : solarized_light     # tomorrow
